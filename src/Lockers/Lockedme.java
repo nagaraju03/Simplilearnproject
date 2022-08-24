@@ -12,9 +12,9 @@ public class Lockedme {
 		Scanner s = new Scanner(System.in);
 		String filename;
 		Scanner s2=new Scanner(System.in);
-		while(true) {
 		System.out.println("Application Name: LockedMe");
 		System.out.println("Developer   Name: Nagaraju");
+		while(true) {
 		System.out.println("Please enter anyone option from below:");
 		System.out.println("1.List all files");
 		System.out.println("2.More options");
@@ -41,6 +41,7 @@ public class Lockedme {
 				System.out.println("1.Add file");
 				System.out.println("2.Delete file");
 				System.out.println("3.Search file");
+				System.out.println("4.Main menu");
 				int choice2 =s.nextInt();
 				if(choice2==1)
 				{
@@ -81,7 +82,7 @@ public class Lockedme {
 						System.out.println("file not present in the folder");
 					}	
 				}
-				else
+				else if(choice2==3)
 				{
 					System.out.println("enter filename to search");
 					filename = s2.nextLine();
@@ -95,9 +96,13 @@ public class Lockedme {
 						System.out.println(file1.getName()+" file is not found");
 					}
 				}
+				else if(choice2==4)
+				{
+					break;
+				}
 				break;
 			case 3:
-				System.exit(0);
+				System.exit(0);	
 		 }
 		
 		}
